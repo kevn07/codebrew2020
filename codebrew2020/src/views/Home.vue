@@ -1,6 +1,7 @@
 <template>
     <div>
         <HelloWorld msg="Home page"/>
+        <img src="../assets/logo.png"/>
     </div>
 </template>
 
