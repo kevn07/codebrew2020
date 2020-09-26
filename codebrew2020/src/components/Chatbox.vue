@@ -26,6 +26,10 @@ export default {
             {
                 body: "hello friend :))",
                 author: "you"
+            },
+            {
+                body: "g'day",
+                author: "david"
             }]
         }
     },
