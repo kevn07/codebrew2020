@@ -1,5 +1,10 @@
 <template>
     <div class="container">
+        <div> 
+            <h1 >
+                Virtual Stage
+            </h1>
+        </div>
         <div id="room-nav-bar">
                 <h1 v-on:click='changeFeature("chat")' class="featureOption"  v-bind:class="{ active: isActive }">chat</h1>
                 <h1 v-on:click='changeFeature("activities")' class="featureOption" id="activities-tab"  v-bind:class="{ active: !isActive }">activities</h1>
@@ -72,6 +77,7 @@ export default {
         grid-column-start: 2;
     }
     #item-container {
+        padding-top: 1em;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-start: 1;
