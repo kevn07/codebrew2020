@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>
-            You have been matched with Harold!
+            you have been matched with Harold!
         </h1>
         <img src="@/assets/harold.jpg" />
     </div>
