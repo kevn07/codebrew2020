@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div id="room-nav-bar">
-                <h1 v-on:click='changeFeature("chat")' class="featureOption">chat</h1>
-                <h1 v-on:click='changeFeature("activities")' class="featureOption">activities</h1>
+                <h1 v-on:click='changeFeature("chat")' class="featureOption"  v-bind:class="{ active: isActive }">chat</h1>
+                <h1 v-on:click='changeFeature("activities")' class="featureOption" id="activities-tab"  v-bind:class="{ active: !isActive }">activities</h1>
         </div>
         <div id="item-container">
             <div class="video-container">
@@ -39,12 +39,14 @@ export default {
             feature: "chat",
             selected: {
                 underline: true
-            }
+            },
+            isActive: true
         };
     },
     methods: {
         changeFeature(feature) {
             this.feature = feature
+            this.isActive = !this.isActive
         }
     },
     computed: {
@@ -77,8 +79,16 @@ export default {
     }
     .featureOption {
         margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 25px 25px 25px 25px;
     }
     .featureOption:hover {
+        text-decoration: underline;
+    }
+
+    .active {
+        background: rgb(240, 240, 240);
         text-decoration: underline;
     }
 </style>

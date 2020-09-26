@@ -3,7 +3,7 @@
         <div class="questions-container">
         
             <h4>Select all interests that apply to you</h4>
-
+            
             <InterestTile imageName="testimg.jpeg" interestName="soccer"/>
 
             <div>
