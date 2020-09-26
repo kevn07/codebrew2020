@@ -108,8 +108,6 @@
     width: 80%;
     height: auto;
     margin: auto;
-    border-radius: 25px;
-    background-color: white;
   }
   
   .page-container {
