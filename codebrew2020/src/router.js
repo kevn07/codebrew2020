@@ -6,6 +6,7 @@ import SignUp from './views/SignUp.vue'
 import Room from './views/Room.vue'
 import Profile from './views/Profile.vue'
 import CreateRoom from './views/CreateRoom.vue'
+import Matched from './views/Matched.vue'
 Vue.use(Router)
 
 const routes = [{
@@ -31,6 +32,10 @@ const routes = [{
 {
     path: '/profile',
     component: Profile
+},
+{
+    path: '/matched',
+    component: Matched
 },
 {
     path: '/',

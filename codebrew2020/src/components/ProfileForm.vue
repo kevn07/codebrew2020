@@ -14,7 +14,7 @@
 
             <InterestTile imageName="testimg.jpeg" interestName="soccer"/>
             <div>
-              <a class="btn" href="/home">Match me</a>
+              <a class="btn" href="/matched">Match Me!</a>
             </div>
         </div>
     </div>
