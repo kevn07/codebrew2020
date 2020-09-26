@@ -7,11 +7,14 @@
         </div>
         <div>
             <div id="roomNavBar">
-                <h1 v-on:click='changeFeature("chat")' class="featureOption"> chat </h1>
-                <h1 v-on:click='changeFeature("activities")' class="featureOption"> activities </h1>
+                <h1 v-on:click='changeFeature("chat")' class="featureOption">chat</h1>
+                <h1 v-on:click='changeFeature("activities")' class="featureOption">activities</h1>
             </div>
             <div class="chatboxContainer" v-if='feature == "chat"'>
                 <ChatBox />
+            </div>
+            <div class="chatboxContainer" v-if='feature == "activities"'>
+                <ActivityBox />
             </div>
         </div>
     </div>

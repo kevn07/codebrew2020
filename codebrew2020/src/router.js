@@ -22,6 +22,10 @@ const routes = [{
 {
     path: '/room',
     component: Room
+},
+{
+    path: '/about',
+    component: Home
 }]
 
 const router = new Router({
