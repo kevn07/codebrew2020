@@ -11,8 +11,6 @@
             <InterestTile imageName="knitting.jpeg" interestName="knitting"/>
             <InterestTile imageName="painting.jpeg" interestName="painting"/>
             
-
-            <InterestTile imageName="testimg.jpeg" interestName="soccer"/>
             <div>
               <a class="btn" href="/matched">Match Me!</a>
             </div>
@@ -31,5 +29,9 @@ export default {
 </script>
 
 <style scoped>
-  
+    h4 {
+        padding-top: 18px;
+        text-align: center;
+    }
+    
 </style>

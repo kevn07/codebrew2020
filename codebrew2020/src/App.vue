@@ -85,7 +85,7 @@
   }
 
   #page {
-    background-color: #edeae5;
+      background-color: #f1f1f1;
   }
 
   h1, h2, h3, h4, p {
@@ -110,6 +110,7 @@
     margin: auto;
     border-radius: 25px;
     background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(219, 219, 219);
   }
   
   .page-container {
