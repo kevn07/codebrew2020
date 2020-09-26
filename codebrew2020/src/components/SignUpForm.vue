@@ -15,6 +15,10 @@
             </div>
 
             <div class="signup-input">
+                <input type="text" placeholder="Organisation" required>
+            </div>
+
+            <div class="signup-input">
                 <input type="text" placeholder="Email" required>
             </div>
 
@@ -56,7 +60,8 @@ export default {
 <style scoped>   
 
     h4 {
-        padding-top: 10px;
+        padding-top: 18px;
+        text-align: center;
     }
 
     label, input {
@@ -66,10 +71,14 @@ export default {
 
     input {
         margin: auto;
-        border: 1px solid #303c6c;
-        border-radius: 8px;
+        padding-left: 10px;
+        border-bottom: 1px solid rgb(49, 49, 49);
         width: 45%;
         height: 50px;
+    }
+    input:focus {
+        outline: none;
+        border-bottom: 2px solid rgb(49, 49, 49);
     }
 
     .signup-input {

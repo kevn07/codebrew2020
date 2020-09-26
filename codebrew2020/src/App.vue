@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="page">
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -83,16 +83,23 @@
     color: #2c3e50;
     margin-top: 20px;
   }
-  
+
+  #page {
+    background-color: #edeae5;
+  }
+
+  h1, h2, h3, h4, p {
+    color: rgb(49, 49, 49);
+  }
+
   .btn {
-    background-color: #f4976c; /* Green */
-    color: #303c6c !important;
+    background-color:#558bff; /* Green */
+    color: white !important;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border: 1px solid #303c6c;
     border-radius: 8px;
   }
 
@@ -101,8 +108,8 @@
     width: 80%;
     height: auto;
     margin: auto;
-    box-shadow: 2px 2px 2px 2px;
-    background-color: #FBE8A6;
+    border-radius: 25px;
+    background-color: white;
   }
   
   .page-container {
