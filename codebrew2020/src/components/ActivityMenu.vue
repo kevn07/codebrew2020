@@ -55,6 +55,7 @@ export default {
     .modal {
         padding: 1em;
         width: 100%;
+        height: 100%;
         justify-self: center;
         align-self: center;
     }
