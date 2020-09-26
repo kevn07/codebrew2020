@@ -58,8 +58,9 @@
       items: [
           { title: 'Home', icon: 'mdi-home-city', path: '/home' },
           { title: 'My Account', icon: 'mdi-account', path: '/profile' },
-          { title: 'Room', icon: 'mdi-account-group-outline', path: '/room' },
-          { title: 'About', icon: 'mdi-account-group-outline', path: '/about'}
+          { title: 'Create Room', icon: 'mdi-account-switch', path: '/createRoom'},
+          { title: 'Join Room', icon: 'mdi-account-group', path: '/room/1' },
+          { title: 'About', icon: 'mdi-information', path: '/about'}
         ]
     }),
     created () {
