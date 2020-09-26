@@ -47,7 +47,6 @@ export default {
         min-height: 40vh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        background: white;
         overflow: auto;
         margin: 1em 1em 1em 1em;
         border: 1px solid lightgray;

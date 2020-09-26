@@ -12,6 +12,7 @@
             <InterestTile imageName="painting.jpeg" interestName="painting"/>
             
 
+            <InterestTile imageName="testimg.jpeg" interestName="soccer"/>
             <div>
               <a class="btn" href="/home">Home</a>
             </div>

@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -27,7 +27,8 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Weave</v-toolbar-title>
+      <img :src="require('@/assets/weave.png')" height="50"/>
+      <v-toolbar-title id="company-title">Weave</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -111,5 +112,9 @@
   .page-container > h1 {
         margin: auto;
         text-align: center;
+  }
+
+  #company-title {
+    margin-left: 0.3em;
   }
 </style>
