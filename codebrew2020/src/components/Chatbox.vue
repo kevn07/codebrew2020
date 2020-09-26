@@ -65,7 +65,7 @@ export default {
 .chat-container {
     display: flex;
     flex-direction: column;
-    min-height: 50vh;
+    max-width: 100%;
 }
 .message-out {
   background: #407FFF;
@@ -87,21 +87,20 @@ export default {
 /*   border: 1px solid #ccc; */
   background: white;
   height: 50vh;
-  padding: 1em ;
+  padding: 1em;
   overflow: auto;
   margin: 1em 1em 1em 1em;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 25px 25px 25px 25px;
   border: 1px solid lightgray;
 }
-.input-area {
+form {
     background: white;
     padding: 1em;
     overflow: auto;
     width: 100%;
     margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 0px 0px 25px 25px;
-    border: 1px solid lightgray;
+    border-radius: 25px 25px 25px 25px;
+    /* border: 1px solid lightgray; */
 }
 .form-area {
     display: grid;
