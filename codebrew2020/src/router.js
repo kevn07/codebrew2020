@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import SignUp from './views/SignUp.vue'
 import Room from './views/Room.vue'
+import Profile from './views/Profile.vue'
 
 Vue.use(Router)
 
@@ -24,8 +25,8 @@ const routes = [{
     component: Room
 },
 {
-    path: '/about',
-    component: Home
+    path: '/profile',
+    component: Profile
 }]
 
 const router = new Router({
