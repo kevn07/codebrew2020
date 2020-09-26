@@ -1,16 +1,13 @@
 <template>
-    <div class="border">
-        <vue-web-cam
-            ref="webcam"
-            :device-id="deviceId"
-            width="100%"
-            @started="onStarted"
-            @stopped="onStopped"
-            @error="onError"
-            @cameras="onCameras"
-            @camera-change="onCameraChange"
-        />
-    </div>
+    <vue-web-cam
+        ref="webcam"
+        :device-id="deviceId"
+        @started="onStarted"
+        @stopped="onStopped"
+        @error="onError"
+        @cameras="onCameras"
+        @camera-change="onCameraChange"
+    />
 </template>
 <script>
 import { WebCam } from "vue-web-cam";

@@ -6,7 +6,6 @@
             </p>
         </section>
         <form @submit.prevent="sendMessage('out')" id="input-area">
-            <label for="person-input">You</label>
             <input v-model="youMessage" id="person-input" type="text" placeholder="Type your message">
             <button type="submit">Send</button>
         </form>
@@ -86,6 +85,7 @@ export default {
 }
 .input-area {
     background: white;
+    margin-left: 1em;
     padding: 1em;
     overflow: auto;
     width: 100%;
