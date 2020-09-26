@@ -27,7 +27,7 @@ export default {
         margin: auto;
         width: 33.33%;
         height: auto;
-        
+        padding: 10px;
     }
     .tile-img{
         max-width: 95%;
