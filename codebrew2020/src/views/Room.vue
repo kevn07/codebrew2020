@@ -1,36 +1,26 @@
 <template>
     <div class="container">
-        <code v-for="index in numberOfUsers" :key="index">
-            <div class="border">
-                <vue-web-cam
-                    ref="webcam"
-                    :device-id="deviceId"
-                    width="100%"
-                    @started="onStarted"
-                    @stopped="onStopped"
-                    @error="onError"
-                    @cameras="onCameras"
-                    @camera-change="onCameraChange"
-                />
-            </div>
-        </code>
+        <div class="videoContainer">
+            <code v-for="index in numberOfUsers" :key="index">
+                <Cam />
+            </code>
+        </div>
+        <div class="chatbox">
+            <!-- <ChatBox /> -->
+        </div>
     </div>
 </template>
 
 <script>
-import { WebCam } from "vue-web-cam";
-
+import Cam from "@/components/Cam"
+// import ChatBox from "@/components/ChatBox"
 export default {
     name: "room",
     components: {
-        "vue-web-cam": WebCam
+        Cam
     },
     data() {
         return {
-            img: null,
-            camera: null,
-            deviceId: null,
-            devices: [],
             numberOfUsers: 2
         };
     },
@@ -52,35 +42,12 @@ export default {
             }
             console.log(tail)
         }
-    },
-    methods: {
-        onCapture() {
-            this.img = this.$refs.webcam.capture();
-        },
-        onStarted(stream) {
-            console.log("On Started Event", stream);
-        },
-        onStopped(stream) {
-            console.log("On Stopped Event", stream);
-        },
-        onStop() {
-            this.$refs.webcam.stop();
-        },
-        onStart() {
-            this.$refs.webcam.start();
-        },
-        onError(error) {
-            console.log("On Error Event", error);
-        },
-        onCameras(cameras) {
-            this.devices = cameras;
-            console.log("On Cameras Event", cameras);
-        },
-        onCameraChange(deviceId) {
-            this.deviceId = deviceId;
-            this.camera = deviceId;
-            console.log("On Camera Change Event", deviceId);
-        }
     }
 };
 </script>
+
+<style scoped>
+    .container {
+        display: grid
+    }
+</style>
