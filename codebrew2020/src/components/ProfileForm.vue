@@ -4,12 +4,12 @@
         
             <h4>Select all interests that apply to you</h4>
 
-            <InterestTile imageName="soccah.jpeg" interestName="soccer"/>
-            <InterestTile imageName="dancing.jpg" interestName="dancing"/>
-            <InterestTile imageName="chess.jpeg" interestName="board games"/>
-            <InterestTile imageName="gardening.jpeg" interestName="gardening"/>
-            <InterestTile imageName="knitting.jpeg" interestName="knitting"/>
-            <InterestTile imageName="painting.jpeg" interestName="painting"/>
+            <InterestTile imageName="soccah.jpeg" interestName="Sports"/>
+            <InterestTile imageName="dancing.jpg" interestName="Dancing"/>
+            <InterestTile imageName="chess.jpeg" interestName="Board games"/>
+            <InterestTile imageName="gardening.jpeg" interestName="Gardening"/>
+            <InterestTile imageName="knitting.jpeg" interestName="Knitting"/>
+            <InterestTile imageName="painting.jpeg" interestName="Painting"/>
             
             <div>
               <a class="btn" href="/matched">Match Me!</a>
@@ -30,8 +30,8 @@ export default {
 
 <style scoped>
     h4 {
-        padding-top: 18px;
+        padding: 18px 0;
         text-align: center;
     }
-    
+
 </style>
