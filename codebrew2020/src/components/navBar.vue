@@ -1,22 +1,25 @@
 <template>
  <nav class="navbar navbar-expand navbar-light bg-light">
-      <a class="navbar-brand" href="/home">AppName</a>
-
-      <div class="collapse navbar-collapse" id="nav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="/home">Home</a>
-          <a class="nav-item nav-link active" href="/room">Create/Join Room</a>
-          <a class="nav-item nav-link active" href="/gameRoom">Game room</a>
-          <a class="nav-item nav-link active" href="/profile">My profile</a>
-          <a class="nav-item nav-link active" href="/">test</a>
-        </div>
-        
-      </div>
+      <h2 class="navbar-brand"> <router-link to="/home">AppName </router-link></h2>
+          <!-- <h2 class="nav-item nav-link active" href="/home">Home</h2> -->
+          <h2 class="nav-item nav-link active"><router-link to="/room">Join Room </router-link></h2>
+          <!-- <h2 class="nav-item nav-link active" href="/gameRoom">Game room</h2> -->
+          <h2 class="nav-item nav-link active"><router-link to="/usrProfile">My profile</router-link></h2>
     </nav>
 </template>
 
 <script>
-    module.exports = {
-        data = ()=>{}
-    }
+  export default{
+    name: "navBar"
+  }
 </script>
+
+<style scoped>
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    justify-items: flex-start;
+    justify-content: space-evenly;
+  }
+</style>
