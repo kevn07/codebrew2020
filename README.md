@@ -10,4 +10,4 @@ to run server
     npm install
     npm run serve
 ```
-application by default is running on http://localhost:8080
+application by default will run on http://localhost:8080
