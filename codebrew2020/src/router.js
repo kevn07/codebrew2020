@@ -21,7 +21,7 @@ const routes = [{
     component: SignUp
 },
 {
-    path: '/room',
+    path: '/room/12',
     component: Room
 },
 {

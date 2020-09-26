@@ -5,10 +5,18 @@
                 {{ message.body }}
             </p>
         </section>
-        <form @submit.prevent="sendMessage('out')" id="input-area">
-            <input v-model="youMessage" id="person-input" type="text" placeholder="Type your message">
-            <button type="submit">Send</button>
-        </form>
+        <section class="input-area">
+            <form @submit.prevent="sendMessage('out')" >
+                <div class="form-area">
+                    <input v-model="youMessage" id="person-input" type="text" placeholder="Type your message">
+                    <button type="submit" id="submit-button">
+                        <v-icon>
+                            mdi-send
+                        </v-icon>
+                    </button>
+                </div>
+            </form>
+        </section>
     </div>
 </template>
 
@@ -57,6 +65,7 @@ export default {
 .chat-container {
     display: flex;
     flex-direction: column;
+    min-height: 50vh;
 }
 .message-out {
   background: #407FFF;
@@ -78,16 +87,33 @@ export default {
 /*   border: 1px solid #ccc; */
   background: white;
   height: 50vh;
-  padding: 1em;
+  padding: 1em ;
   overflow: auto;
   margin: 1em 1em 1em 1em;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3)
+  border-radius: 25px 25px 0px 0px;
+  border: 1px solid lightgray;
 }
 .input-area {
     background: white;
-    margin-left: 1em;
     padding: 1em;
     overflow: auto;
     width: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 0px 0px 25px 25px;
+    border: 1px solid lightgray;
+}
+.form-area {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+#person-input {
+    align-self: start;
+    width: 100%;
+    height: 100%;
+}
+
+#submit-button {
+    position: right;
 }
 </style>

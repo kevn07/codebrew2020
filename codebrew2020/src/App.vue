@@ -60,10 +60,9 @@
     data: () => ({
       drawer: null,
       items: [
-          { title: 'Home', icon: 'mdi-home-city', path: '/home' },
+          // { title: 'Home', icon: 'mdi-home-city', path: '/home' },
           { title: 'My Account', icon: 'mdi-account', path: '/userProfile' },
-          { title: 'Room', icon: 'mdi-account-group-outline', path: '/room' },
-          { title: 'About', icon: 'mdi-account-group-outline', path: '/about'}
+          { title: 'Room', icon: 'mdi-account-group-outline', path: '/room/12' }
         ]
     }),
     created () {

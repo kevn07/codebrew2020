@@ -50,7 +50,8 @@ export default {
         background: white;
         overflow: auto;
         margin: 1em 1em 1em 1em;
-        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3)
+        border: 1px solid lightgray;
+        border-radius: 25px 25px 25px 25px;
     }
     .modal {
         padding: 1em;
