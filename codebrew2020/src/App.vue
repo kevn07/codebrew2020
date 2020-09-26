@@ -85,7 +85,7 @@
   }
 
   #page {
-    background-color: #edeae5;
+    text-align:center;
   }
 
   h1, h2, h3, h4, p {
