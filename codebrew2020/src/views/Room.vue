@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div> 
-            <h1 >
+            <h1>
                 Virtual Stage
             </h1>
         </div>
@@ -51,7 +51,11 @@ export default {
     methods: {
         changeFeature(feature) {
             this.feature = feature
-            this.isActive = !this.isActive
+            if (feature == "chat") {
+                this.isActive = true
+            } else {
+                this.isActive = false
+            }
         }
     },
     computed: {
