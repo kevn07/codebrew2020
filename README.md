@@ -1,7 +1,7 @@
 # codebrew2020 hackathon
 
 ## Description
-This application is a template build to represent a possible solution to assist in helping the elderly by providing virtual chat platform with activities selection that will promote communication and improve overall health of numerous parties.
+This application is a template build to represent a possible solution to assist in helping the elderly by providing a virtual chat platform with activities selection that will promote communication and improve overall health of numerous parties.
 
 ## Usage
 to run server
