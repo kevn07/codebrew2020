@@ -5,18 +5,18 @@
       app
       clipped
     >
-      <v-list dense>
-        <v-list-item
+      <v-list two-line>
+        <v-list-item 
                 v-for="item in items"
                 :key="item.title"
                 @click="changeRouter(item)"
               >
                 <v-list-item-icon>
-                  <v-icon>{{ item.icon }}</v-icon>
+                  <v-icon large class="material-icon">{{ item.icon }}</v-icon>
                 </v-list-item-icon>
 
                 <v-list-item-content>
-                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  <v-list-item-title :style="{'align-items':'center'}">{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -125,4 +125,6 @@
   #company-title {
     margin-left: 0.3em;
   }
+
+  .material-icon { vertical-align: middle }
 </style>
