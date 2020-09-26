@@ -1,17 +1,19 @@
 <template>
     <div class="container">
-        <div class="border">
-            <vue-web-cam
-                ref="webcam"
-                :device-id="deviceId"
-                width="100%"
-                @started="onStarted"
-                @stopped="onStopped"
-                @error="onError"
-                @cameras="onCameras"
-                @camera-change="onCameraChange"
-            />
-        </div>
+        <code v-for="index in numberOfUsers" :key="index">
+            <div class="border">
+                <vue-web-cam
+                    ref="webcam"
+                    :device-id="deviceId"
+                    width="100%"
+                    @started="onStarted"
+                    @stopped="onStopped"
+                    @error="onError"
+                    @cameras="onCameras"
+                    @camera-change="onCameraChange"
+                />
+            </div>
+        </code>
     </div>
 </template>
 
@@ -28,7 +30,8 @@ export default {
             img: null,
             camera: null,
             deviceId: null,
-            devices: []
+            devices: [],
+            numberOfUsers: 2
         };
     },
     computed: {
