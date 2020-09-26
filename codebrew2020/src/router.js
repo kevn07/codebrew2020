@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import SignUp from './views/SignUp.vue'
+import Room from './views/Room.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,10 @@ const routes = [{
 {
     path: '/signup',
     component: SignUp
+},
+{
+    path: '/room',
+    component: Room
 }]
 
 const router = new Router({
