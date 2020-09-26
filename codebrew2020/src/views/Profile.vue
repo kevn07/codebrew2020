@@ -1,6 +1,6 @@
 <template>
     <div class="page-container">
-        <h1>Profile</h1>
+        <h1>Select Interest</h1>
         <ProfileForm/>
     </div>
 </template>
