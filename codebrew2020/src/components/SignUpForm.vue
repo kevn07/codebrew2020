@@ -6,37 +6,31 @@
 
 
             <div class="signup-input">
-                <label for="givenname"><b>Given name</b></label>
-                <input type="text"  placeholder="Enter given name" required>
+                <input type="text"  placeholder="Given name" required>
             </div>
             <div class="signup-input">
-                <label for="familyname"><b>Family name</b></label>
-                <input type="text" placeholder="Enter your family name" required>
+                <input type="text" placeholder="Family name" required>
             </div>
             
             <div class="signup-input">
-                <label for="dob"><b>Date of birth</b></label>
-                <input type="date" placeholder="Enter your date of birth" required>
+                <input type="date" placeholder="Date of birth" required>
             </div>
 
             <div class="signup-input">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="text" placeholder="Email" required>
             </div>
 
             <div class="signup-input">
-                <label for="pw"><b>Password</b></label>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" placeholder="Password" required>
             </div>
             
             <div class="signup-input">
-                <label for="pwconfirm"><b>Confirm password</b></label>
-                <input type="password" placeholder="Confirm your password" required>
+                <input type="password" placeholder="Confirm password" required>
             </div>
 
-            <div>
-                <a class="btn" href="/home" id="cancelbtn">Cancel</a>
-                <a class="btn" href="/profile" id="signupbtn">Create account</a>
+            <div id="signup-btn-col">
+                <a class="btn btn-left" href="/home" id="cancelbtn">Cancel</a>
+                <a class="btn btn-right" href="/profile" id="signupbtn">Create account</a>
             </div>
         </div>
     </div>
@@ -61,16 +55,39 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scope>    
+    label, input {
+        display: block;
+        margin-left: 20%;
+    }
 
-    .signup-input {   
+    input {
         margin: auto;
+        border: 2px solid #303c6c;
+        border-radius: 8px;
+        width: 45%;
+        height: 45px;
+    }
+
+    .signup-input {
+        margin: 20px auto;
         text-align: left;
     }
 
     .btn {
-        margin: 0 5px;
         min-width: 170px;
+    }
+
+    .btn-left {
+        margin: 0 5px 0 auto;
+    }
+
+    .btn-right {
+        margin: 0 auto 0 5px;
+    }
+
+    #signup-btn-col {
+        display: flex;
     }
 
 </style>

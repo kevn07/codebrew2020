@@ -27,7 +27,12 @@ const routes = [{
 {
     path: '/profile',
     component: Profile
-}]
+},
+{
+    path: '/',
+    component: Login
+}
+]
 
 const router = new Router({
     routes,

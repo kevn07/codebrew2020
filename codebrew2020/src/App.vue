@@ -52,6 +52,7 @@
 </template>
 
 <script>
+
   export default {
     name: 'App',
     props: {
@@ -61,13 +62,13 @@
       drawer: null,
       items: [
           { title: 'Home', icon: 'mdi-home-city', path: '/home' },
-          { title: 'My Account', icon: 'mdi-account', path: '/userProfile' },
+          { title: 'My Account', icon: 'mdi-account', path: '/profile' },
           { title: 'Room', icon: 'mdi-account-group-outline', path: '/room' },
           { title: 'About', icon: 'mdi-account-group-outline', path: '/about'}
         ]
     }),
     created () {
-      this.$vuetify.theme.dark = false
+      this.$vuetify.theme.light = false
     },
     methods: {
       changeRouter(item) {
@@ -88,20 +89,33 @@
   }
   
   .btn {
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #f4976c; /* Green */
+    color: #303c6c !important;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border: 2px solid #303c6c;
+    border-radius: 8px;
   }
 
   .questions-container {
     display: float;
-    width: 70%;
+    width: 80%;
     height: auto;
     margin: auto;
     box-shadow: 2px 2px 2px 2px;
+    background-color: #FBE8A6;
+  }
+  
+  .page-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .page-container > h1 {
+        margin: auto;
+        text-align: center;
   }
 </style>

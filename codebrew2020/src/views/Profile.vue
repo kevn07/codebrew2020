@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-container">
         <h1>Profile</h1>
         <ProfileForm/>
     </div>

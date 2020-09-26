@@ -1,8 +1,8 @@
 <template>
-    <div>
-
-        <img :src="require('@/assets/' + imageName + '')" height="130px" width="130px"/>
-        <div>
+    <div class="tile">
+        <div class="tile-img">
+            <img :src="require('@/assets/' + imageName + '')"/>
+            
             <input type="checkbox"> {{ interestName }}
         </div>
 
@@ -21,5 +21,23 @@ export default {
 </script>
 
 <style scoped>
+
+    .tile {
+        float: left;
+        margin: auto;
+        width: 33.33%;
+        height: auto;
+        
+    }
+    .tile-img{
+        max-width: 95%;
+        height: auto;
+        margin: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
 </style>
