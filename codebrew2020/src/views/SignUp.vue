@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <h1>Sign Up</h1>
+        <SignUpForm title="Hello world"/>
+    </div>
+</template>
+
+<script>
+import SignUpForm from '../components/SignUpForm'
+export default {
+    name: 'SignUp',
+    components: {
+        SignUpForm
+    }
+}
+</script>
+
