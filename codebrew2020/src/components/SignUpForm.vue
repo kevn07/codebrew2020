@@ -53,7 +53,12 @@ export default {
 }
 </script>
 
-<style scope>    
+<style scoped>   
+
+    h4 {
+        padding-top: 10px;
+    }
+
     label, input {
         display: block;
         margin-left: 20%;
@@ -61,10 +66,10 @@ export default {
 
     input {
         margin: auto;
-        border: 2px solid #303c6c;
+        border: 1px solid #303c6c;
         border-radius: 8px;
         width: 45%;
-        height: 45px;
+        height: 50px;
     }
 
     .signup-input {
@@ -86,6 +91,7 @@ export default {
 
     #signup-btn-col {
         display: flex;
+        padding-bottom: 25px;
     }
 
 </style>
