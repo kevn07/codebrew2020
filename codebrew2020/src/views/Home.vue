@@ -1,13 +1,11 @@
 <template>
     <div>
         <HelloWorld msg="Home page"/>
-        <img src="../assets/logo.png"/>
     </div>
 </template>
 
 <script>
 import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
   components: {

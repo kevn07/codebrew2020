@@ -5,7 +5,7 @@ import Login from './views/Login.vue'
 import SignUp from './views/SignUp.vue'
 import Room from './views/Room.vue'
 import Profile from './views/Profile.vue'
-
+import CreateRoom from './views/CreateRoom.vue'
 Vue.use(Router)
 
 const routes = [{
@@ -21,8 +21,12 @@ const routes = [{
     component: SignUp
 },
 {
-    path: '/room',
+    path: '/room/:id',
     component: Room
+},
+{
+    path: '/createRoom',
+    component: CreateRoom
 },
 {
     path: '/profile',

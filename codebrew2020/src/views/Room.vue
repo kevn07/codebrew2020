@@ -1,20 +1,27 @@
 <template>
     <div class="container">
-        <div class="videoContainer">
-            <code v-for='index in numberOfUsers' :key='index'>
-                <Cam />
-            </code>
+        <div> 
+            <h1 >
+                Virtual Stage
+            </h1>
         </div>
-        <div>
-            <div id="roomNavBar">
-                <h1 v-on:click='changeFeature("chat")' class="featureOption">chat</h1>
-                <h1 v-on:click='changeFeature("activities")' class="featureOption">activities</h1>
+        <div id="room-nav-bar">
+                <h1 v-on:click='changeFeature("chat")' class="featureOption"  v-bind:class="{ active: isActive }">chat</h1>
+                <h1 v-on:click='changeFeature("activities")' class="featureOption" id="activities-tab"  v-bind:class="{ active: !isActive }">activities</h1>
+        </div>
+        <div id="item-container">
+            <div class="video-container">
+                <span v-for='index in numberOfUsers' :key='index'>
+                    <Cam />
+                </span>
             </div>
-            <div class="chatboxContainer" v-if='feature == "chat"'>
-                <ChatBox />
-            </div>
-            <div class="chatboxContainer" v-if='feature == "activities"'>
-                <ActivityBox />
+            <div class="activity-container">
+                <div class="chatbox-container" v-if='feature == "chat"'>
+                    <ChatBox />
+                </div>
+                <div class="chatbox-container" v-if='feature == "activities"'>
+                    <ActivityMenu />
+                </div>
             </div>
         </div>
     </div>
@@ -23,11 +30,13 @@
 <script>
 import Cam from "@/components/Cam"
 import ChatBox from "@/components/Chatbox"
+import ActivityMenu from "@/components/ActivityMenu"
 export default {
     name: "room",
     components: {
         Cam,
-        ChatBox
+        ChatBox,
+        ActivityMenu
     },
     data() {
         return {
@@ -35,12 +44,14 @@ export default {
             feature: "chat",
             selected: {
                 underline: true
-            }
+            },
+            isActive: true
         };
     },
     methods: {
         changeFeature(feature) {
             this.feature = feature
+            this.isActive = !this.isActive
         }
     },
     computed: {
@@ -59,16 +70,31 @@ export default {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    #roomNavBar {
+    #room-nav-bar {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        
+        grid-column-start: 2;
+    }
+    #item-container {
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
     .featureOption {
         margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 25px 25px 25px 25px;
     }
     .featureOption:hover {
+        text-decoration: underline;
+    }
+
+    .active {
+        background: rgb(240, 240, 240);
         text-decoration: underline;
     }
 </style>
