@@ -2,7 +2,7 @@
     <div class="container">
         <div> 
             <h1>
-                virtual stage
+                Virtual Stage
             </h1>
         </div>
         <div id="room-nav-bar">

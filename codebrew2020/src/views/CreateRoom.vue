@@ -1,11 +1,11 @@
 <template>
     <div class="create-room-container">
             <h1 @click="generateLink()" id="create-link">
-                create a room!
+                Create a Room!
             </h1>
             <div v-if="roomDetail.link">
-                <p> room number: {{ roomDetail.number }} </p>
-                <p> room link: {{ roomDetail.link }} </p> 
+                <p> Room Number: {{ roomDetail.number }} </p>
+                <p> Room Link: {{ roomDetail.link }} </p> 
             </div>
     </div>
 </template>
