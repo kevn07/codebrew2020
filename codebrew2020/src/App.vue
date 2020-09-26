@@ -92,7 +92,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border: 2px solid #303c6c;
+    border: 1px solid #303c6c;
     border-radius: 8px;
   }
 
