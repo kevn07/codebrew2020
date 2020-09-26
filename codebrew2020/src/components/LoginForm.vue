@@ -2,12 +2,10 @@
     <div>
         <div class="questions-container">  
             <div class="signup-input">
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="text" placeholder="Email" required>
             </div>
             <div class="signup-input">
-                <label for="pw"><b>Password</b></label>
-                <input type="password" placeholder="Enter your password" required>
+                <input type="password" placeholder="Password" required>
             </div>
             <div>
               <a class="btn" href="/home">Log in</a>
@@ -24,3 +22,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.signup-input {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+input {
+        margin: auto;
+        padding-left: 10px;
+        border-bottom: 1px solid rgb(49, 49, 49);
+        width: 45%;
+        height: 50px;
+    }
+    input:focus {
+        outline: none;
+        border-bottom: 2px solid rgb(49, 49, 49);
+    }
+</style>
