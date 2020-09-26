@@ -3,8 +3,6 @@
         <p>{{ title }}</p>
         <div class="questions-container">
             <h4>Sign up with your email</h4>
-
-
             <div class="signup-input">
                 <input type="text"  placeholder="Given name" required>
             </div>
