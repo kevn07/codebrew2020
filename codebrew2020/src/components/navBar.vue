@@ -4,7 +4,7 @@
           <!-- <h2 class="nav-item nav-link active" href="/home">Home</h2> -->
           <h2 class="nav-item nav-link active"><router-link to="/room">Join Room </router-link></h2>
           <!-- <h2 class="nav-item nav-link active" href="/gameRoom">Game room</h2> -->
-          <h2 class="nav-item nav-link active"><router-link to="/usrProfile">My profile</router-link></h2>
+          <h2 class="nav-item nav-link active"><router-link to="/profile">My profile</router-link></h2>
     </nav>
 </template>
 
