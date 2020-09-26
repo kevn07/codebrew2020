@@ -2,6 +2,8 @@
     <vue-web-cam
         ref="webcam"
         :device-id="deviceId"
+        :height="height"
+        :width="width"
         @started="onStarted"
         @stopped="onStopped"
         @error="onError"
@@ -21,6 +23,8 @@ export default {
             img: null,
             camera: null,
             deviceId: null,
+            width: "100%",
+            height: 250,
             devices: [],
             numberOfUsers: 2
         };
