@@ -85,7 +85,6 @@ export default {
 }
 .chat-area {
 /*   border: 1px solid #ccc; */
-  background: white;
   height: 50vh;
   padding: 1em;
   overflow: auto;

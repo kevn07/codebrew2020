@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -27,7 +27,8 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Weave</v-toolbar-title>
+      <img :src="require('@/assets/weave.png')" height="50"/>
+      <v-toolbar-title id="company-title">Weave</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -55,13 +56,12 @@
       drawer: null,
       items: [
           // { title: 'Home', icon: 'mdi-home-city', path: '/home' },
-          { title: 'My Account', icon: 'mdi-account', path: '/userProfile' },
+          { title: 'My Account', icon: 'mdi-account', path: '/profile' },
           { title: 'Create Room', icon: 'mdi-account-switch', path: '/createRoom' },
           { title: 'Join Room', icon: 'mdi-account-group ', path: '/room/1' }
         ]
     }),
     created () {
-      this.$vuetify.theme.dark = false
     },
     methods: {
       changeRouter(item) {
@@ -97,5 +97,9 @@
     height: auto;
     margin: auto;
     box-shadow: 2px 2px 2px 2px;
+  }
+
+  #company-title {
+    margin-left: 0.3em;
   }
 </style>
