@@ -1,46 +1,51 @@
 <template>
     <div class="container">
         <div class="videoContainer">
-            <code v-for="index in numberOfUsers" :key="index">
+            <code v-for='index in numberOfUsers' :key='index'>
                 <Cam />
             </code>
         </div>
-        <div class="chatbox">
-            <!-- <ChatBox /> -->
+        <div>
+            <div id="roomNavBar">
+                <h1 v-on:click='changeFeature("chat")' class="featureOption"> chat </h1>
+                <h1 v-on:click='changeFeature("activities")' class="featureOption"> activities </h1>
+            </div>
+            <div class="chatboxContainer" v-if='feature == "chat"'>
+                <ChatBox />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import Cam from "@/components/Cam"
-// import ChatBox from "@/components/ChatBox"
+import ChatBox from "@/components/Chatbox"
 export default {
     name: "room",
     components: {
-        Cam
+        Cam,
+        ChatBox
     },
     data() {
         return {
-            numberOfUsers: 2
+            numberOfUsers: 2,
+            feature: "chat",
+            selected: {
+                underline: true
+            }
         };
     },
-    computed: {
-        device: function() {
-            return this.devices.find(n => n.deviceId === this.deviceId);
+    methods: {
+        changeFeature(feature) {
+            this.feature = feature
         }
     },
-    watch: {
-        camera: function(id) {
-            this.deviceId = id;
+    computed: {
+        activitySelected() {
+            return this.feature == "activity"
         },
-        devices: function() {
-            // Once we have a list select the first one
-            const [first, ...tail] = this.devices;
-            if (first) {
-                this.camera = first.deviceId;
-                this.deviceId = first.deviceId;
-            }
-            console.log(tail)
+        chatSelected() {
+            return this.feature == "chat"
         }
     }
 };
@@ -48,6 +53,19 @@ export default {
 
 <style scoped>
     .container {
-        display: grid
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #roomNavBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .featureOption {
+        margin-bottom: 0;
+    }
+    .featureOption:hover {
+        text-decoration: underline;
     }
 </style>
