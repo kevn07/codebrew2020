@@ -88,7 +88,7 @@ export default {
   height: 50vh;
   padding: 1em;
   overflow: auto;
-  margin: 1em 1em 1em 1em;
+  margin: 0em 1em 1em 1em;
   border-radius: 25px 25px 25px 25px;
   border: 1px solid lightgray;
 }

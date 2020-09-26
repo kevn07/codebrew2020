@@ -25,7 +25,7 @@ export default {
 <style scoped>
     .modal-grid {
         display: grid;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: 0.5fr 1fr;
     }
     .modal-icon {
         padding-top: 25px;

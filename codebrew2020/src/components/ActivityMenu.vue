@@ -48,13 +48,14 @@ export default {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         overflow: auto;
-        margin: 1em 1em 1em 1em;
+        margin: 0em 1em 1em 1em;
         border: 1px solid lightgray;
         border-radius: 25px 25px 25px 25px;
     }
     .modal {
         padding: 1em;
         width: 100%;
+        height: 100%;
         justify-self: center;
         align-self: center;
     }

@@ -2,7 +2,7 @@
     <div>
         <div class="questions-container">
         
-            <h4>Select all interests that apply to you</h4>
+            <h4>select all interests that apply to you</h4>
 
             <InterestTile imageName="soccah.jpeg" interestName="Sports"/>
             <InterestTile imageName="dancing.jpg" interestName="Dancing"/>
@@ -12,7 +12,7 @@
             <InterestTile imageName="painting.jpeg" interestName="Painting"/>
             
             <div>
-              <a class="btn" href="/matched">Match Me!</a>
+              <a class="btn" href="/matched">match me!</a>
             </div>
         </div>
     </div>

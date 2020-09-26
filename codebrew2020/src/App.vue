@@ -5,18 +5,18 @@
       app
       clipped
     >
-      <v-list dense>
-        <v-list-item
+      <v-list two-line>
+        <v-list-item 
                 v-for="item in items"
                 :key="item.title"
                 @click="changeRouter(item)"
               >
                 <v-list-item-icon>
-                  <v-icon>{{ item.icon }}</v-icon>
+                  <v-icon large class="material-icon">{{ item.icon }}</v-icon>
                 </v-list-item-icon>
 
                 <v-list-item-content>
-                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  <v-list-item-title :style="{'align-items':'center'}">{{ item.title }}</v-list-item-title>
                 </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,7 +28,7 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <img :src="require('@/assets/weave.png')" height="50"/>
-      <v-toolbar-title id="company-title">Weave</v-toolbar-title>
+      <v-toolbar-title id="company-title">weave</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -56,11 +56,11 @@
     data: () => ({
       drawer: null,
       items: [
-          { title: 'Home', icon: 'mdi-home-city', path: '/home' },
-          { title: 'Match Me', icon: 'mdi-account-multiple-plus', path: '/profile' },
-          { title: 'Create Room', icon: 'mdi-account-switch', path: '/createRoom'},
-          { title: 'Join Room', icon: 'mdi-account-group', path: '/room/1' },
-          { title: 'About', icon: 'mdi-information', path: '/about'}
+          { title: 'home', icon: 'mdi-home-city', path: '/home' },
+          { title: 'match me', icon: 'mdi-account-multiple-plus', path: '/profile' },
+          { title: 'create room', icon: 'mdi-account-switch', path: '/createRoom'},
+          { title: 'join room', icon: 'mdi-account-group', path: '/room/1' },
+          { title: 'about', icon: 'mdi-information', path: '/about'}
         ]
     }),
     created () {
@@ -123,4 +123,6 @@
   #company-title {
     margin-left: 0.3em;
   }
+
+  .material-icon { vertical-align: middle }
 </style>
