@@ -1,7 +1,7 @@
 <template>
     <div class="create-room-container">
             <h1 @click="generateLink()" id="create-link">
-                Create a Room!
+                <button type ='submit' class='btn'> Create a Room! </button>
             </h1>
             <div v-if="roomDetail.link">
                 <p> Room Number: {{ roomDetail.number }} </p>
